@@ -10,6 +10,12 @@
     margin: 0 auto;
 }
 
+img {
+    width: auto;
+    max-width: 100%;
+    height: auto !important;
+    }
+
 header {
     background: $color__pink;
     & h1 {
@@ -51,11 +57,14 @@ section {
         p {
             font-family: $font__text--light;
             font-size: rem(14);
+            padding: rem(15) rem(0);
         }
 
         .buttonStyle {
-          @include buttonStyle(3,$color__pink,10,10);
+          @include buttonStyle(3,$color__pink,20,10);
           color: $color__white;
+          font-size: rem(13);
+          margin: rem(20) rem(0);
         }
 
     }
