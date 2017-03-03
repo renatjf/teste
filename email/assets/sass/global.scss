@@ -1,0 +1,75 @@
+@import "_variables";
+@import "_grid";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.grid {
+    @include grid(90%);
+    margin: 0 auto;
+}
+
+header {
+    background: $color__pink;
+    & h1 {
+        font-family: $font__heading;
+        font-weight: 100;
+        color: $color__white;
+        @media only screen and (min-width: 0px) and (max-width: 450px) {
+            font-size: rem(25);
+            padding: rem(15) rem(0);
+        }
+    }
+    @media only screen and (min-width: 0px) and (max-width: 450px) {
+        display: block;
+    }
+}
+
+.logo {
+    @media only screen and (min-width: 0px) and (max-width: 450px) {
+        svg {
+            width: rem(40);
+        }
+    }
+}
+
+section {
+    h3 {
+        font-family: $font__text--bold;
+        text-transform: uppercase;
+        padding: rem(15) rem(0);
+    }
+    @media only screen and (min-width: 0px) and (max-width: 450px) {
+
+        margin-top: rem(30);
+
+        h3 {
+          font-size: rem(18);
+        }
+
+        p {
+            font-family: $font__text--light;
+            font-size: rem(14);
+        }
+
+        .buttonStyle {
+          @include buttonStyle(3,$color__pink,10,10);
+          color: $color__white;
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

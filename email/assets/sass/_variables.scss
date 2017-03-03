@@ -1,0 +1,131 @@
+@charset "UTF-8";
+
+// converter rem
+$browser-context: 16;
+@function rem($pixels, $context: $browser-context) {
+    @if (unitless($pixels)) {
+        $pixels: $pixels * 1px;
+    }
+    @if (unitless($context)) {
+        $context: $context * 1px;
+    }
+    @return $pixels / $context * 1rem;
+}
+
+@mixin grid($wh) {
+  width: $wh;
+}
+
+@mixin buttonStyle($radius, $bg, $wh, $hg) {
+  border-radius: rem($radius);
+  background: $bg;
+  padding: rem($wh) rem($hg);
+  text-decoration: none;
+  font-family: $font__text--regular;
+  display: block;
+  text-align: center;
+}
+
+// Colors
+$color__white: #ffffff;
+$color__black: #222222;
+
+$color__gray: #909090;
+$color__gray--light: #dbdbdb;
+$color__gray--lighter: #f0f0f0;
+$color__gray--bright: #f5f5f5;
+
+
+//Purples
+$color__purple: #8F25E5;
+$color__purple--2: #900AE9;
+
+$color__purple--dark: #7A24CC;
+$color__purple--light: #BD0FE1;
+
+// Old brand colors
+$color__aqua: #00a596;
+$color__magenta: #8c3c8c;
+
+// New Brand Colors
+
+$color__blue: #009DF7;
+$color__pink: #C72177;
+$color__green: #00d213;
+$color__orange: #F8562C;
+$color__yellow: #F0C000;
+
+$color__alert--red: #ff0000;
+$color__alert--green: #47b969;
+
+$win-colors: (
+  #{$color__aqua}: #00998c,
+  #{$color__magenta}: #803780,
+  #{$color__purple}: #8f25e5,
+  #{$color__blue}: #009df7,
+  #{$color__pink}: #c72177,
+  #{$color__green}: #44cc00,
+  #{$color__orange}: #f8562c,
+  #{$color__yellow}: #f0c000
+);
+
+// Forms
+$formPaddingVertical: 1.125rem;
+$formPaddingHorizontal: 2.25rem;
+
+// Border
+$border-radius-width: rem(2);
+
+// Elements
+$cartHeightMobile: rem(80);
+$cartHeightDesktop: rem(100);
+
+
+@font-face {
+  font-family: oiTitle;
+  src: url(../fonts/simplon/simplonoi-headline-webfont.eot);
+  src: url(../fonts/simplon/simplonoi-headline-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/simplon/simplonoi-headline-webfont.woff) format("woff"), url(../fonts/simplon/simplonoi-headline-webfont.ttf) format("truetype"), url(../fonts/simplon/simplonoi-headline-webfont.svg#simplon_oiheadline) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: oiTextRegular;
+  src: url(../fonts/simplon/simplonbp-regular-webfont.eot);
+  src: url(../fonts/simplon/simplonbp-regular-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/simplon/simplonbp-regular-webfont.woff) format("woff"), url(../fonts/simplon/simplonbp-regular-webfont.ttf) format("truetype"), url(../fonts/simplon/simplonbp-regular-webfont.svg#simplon_bpregular) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: oiTextMedium;
+  src: url(../fonts/simplon/simplonbp-medium-webfont.eot);
+  src: url(../fonts/simplon/simplonbp-medium-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/simplon/simplonbp-medium-webfont.woff) format("woff"), url(../fonts/simplon/simplonbp-medium-webfont.ttf) format("truetype"), url(../fonts/simplon/simplonbp-medium-webfont.svg#simplon_bpmedium) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: oiTextBold;
+  src: url(../fonts/simplon/simplonbp-bold-webfont.eot);
+  src: url(../fonts/simplon/simplonbp-bold-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/simplon/simplonbp-bold-webfont.woff) format("woff"), url(../fonts/simplon/simplonbp-bold-webfont.ttf) format("truetype"), url(../fonts/simplon/simplonbp-bold-webfont.svg#simplon_bpbold) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: oiTextLight;
+  src: url(../fonts/simplon/simplonbp-light-webfont.eot);
+  src: url(../fonts/simplon/simplonbp-light-webfont.eot?#iefix) format("embedded-opentype"), url(../fonts/simplon/simplonbp-light-webfont.woff) format("woff"), url(../fonts/simplon/simplonbp-light-webfont.ttf) format("truetype"), url(../fonts/simplon/simplonbp-light-webfont.svg#simplon_light) format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+// Fonts
+$font__heading: 'oiTitle', sans-serif;
+$font__text--regular: 'oiTextRegular', sans-serif;
+$font__text--medium: 'oiTextMedium', sans-serif;
+$font__text--bold: 'oiTextBold', sans-serif;
+$font__text--light: 'oiTextLight', sans-serif;
+
+
