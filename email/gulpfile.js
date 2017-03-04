@@ -3,6 +3,7 @@
 var gulp = require('gulp'),
     sass = require('gulp-sass'),
     imagemin = require('gulp-imagemin'),
+    injectSvg = require('gulp-inject-svg'),
     webpack = require('webpack-stream'),
     browserSync = require('browser-sync');
 
@@ -31,6 +32,15 @@ gulp.task('img', function() {
 
 });
 
+gulp.task('injectSvg', function() {
+
+  return gulp.src('*.html')
+    .pipe(injectSvg())
+    .pipe(gulp.dest(''));
+
+});
+
+
 //browser-sync
 gulp.task('browser-sync', function() {
     browserSync.init(['./css/**', './**'], {
@@ -50,8 +60,9 @@ gulp.task('webpack-stream', function() {
 
 
 //view
-gulp.task('dev', ['sass', 'webpack-stream', 'img', 'browser-sync'], function() {
+gulp.task('dev', ['sass', 'webpack-stream', 'img', 'injectSvg', 'browser-sync'], function() {
     gulp.watch('/assets/img/**/*.{gif,jpg,png,svg}', ['img']);
+    gulp.watch('*.html', ['injectSvg']);
     gulp.watch('./assets/sass/**/*.scss', ['sass']);
     gulp.watch('./assets/components/**/*.js', ['webpack-stream']);
 

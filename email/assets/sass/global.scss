@@ -8,35 +8,109 @@
 .grid {
     @include grid(90%);
     margin: 0 auto;
+    @media only screen and (min-width: 735px) {
+        padding-top: rem(20);
+    }
+    @media only screen and (min-width: 768px) {
+        padding-top: rem(80);
+    }
+     @media only screen and (min-width: 1440px) {
+      @include grid(80%);
+
+     }
 }
 
 img {
     width: auto;
     max-width: 100%;
     height: auto !important;
-    }
+}
+
+.buttonClose {
+  svg {
+    width: rem(25);
+    height: rem(25);
+    fill: $color__white;
+    position: absolute;
+    z-index: 999;
+    top: rem(20);
+    right: rem(30);
+
+     @media only screen and (min-width: 768px) {
+      width: rem(35);
+    height: rem(35);
+      fill: $color__gray--light;
+      top: rem(60);
+      right: rem(30);
+     }
+  }
+}
 
 header {
     background: $color__pink;
+    display: block;
+    @media only screen and (min-width: 768px) {
+        @include gradiente();
+        height:100vh;
+    }
     & h1 {
         font-family: $font__heading;
         font-weight: 100;
         color: $color__white;
-        @media only screen and (min-width: 0px) and (max-width: 450px) {
+        @media only screen and (min-width: 320px) {
             font-size: rem(25);
             padding: rem(15) rem(0);
         }
-    }
-    @media only screen and (min-width: 0px) and (max-width: 450px) {
-        display: block;
+        @media only screen and (min-width: 320px) {
+            font-size: rem(35);
+        }
+        @media only screen and (min-width: 768px) {
+          font-size: rem(70);
+            padding: rem(75) rem(0);
+            line-height: rem(60);
+            display: table-caption;
+
+        }
+         @media only screen and (min-width: 1440px) {
+          font-size: rem(100);
+          line-height: rem(90);
+         }
+         @media only screen and (min-width: 2500px) {
+          font-size: rem(150);
+          line-height: rem(120);
+
+         }
     }
 }
 
 .logo {
-    @media only screen and (min-width: 0px) and (max-width: 450px) {
+    @media only screen and (min-width: 320px) {
         svg {
             width: rem(40);
+            fill: $color__white;
         }
+    }
+    @media only screen and (min-width: 735px) {
+        svg {
+            width: rem(60);  
+        }
+    }
+    @media only screen and (min-width: 1440px) {
+      svg {
+            width: rem(100);
+            height: rem(100);
+            
+        }
+
+        @media only screen and (min-width: 2500px) {
+          svg {
+            width: rem(150);
+            height: rem(150);
+            
+        }
+
+        }
+
     }
 }
 
@@ -46,39 +120,60 @@ section {
         text-transform: uppercase;
         padding: rem(15) rem(0);
     }
-    @media only screen and (min-width: 0px) and (max-width: 450px) {
-
+    @media only screen and (min-width: 320px) {
         margin-top: rem(30);
-
         h3 {
-          font-size: rem(18);
+            font-size: rem(18);
         }
-
         p {
             font-family: $font__text--light;
             font-size: rem(14);
             padding: rem(15) rem(0);
         }
-
         .buttonStyle {
-          @include buttonStyle(3,$color__pink,20,10);
-          color: $color__white;
-          font-size: rem(13);
-          margin: rem(20) rem(0);
+            @include buttonStyle(3, $color__pink, 25, 10);
+            color: $color__white;
+            font-size: rem(13);
+            margin: rem(20) rem(0);
         }
-
     }
+    @media only screen and (min-width: 735px) {
+      
+        h3 {
+            font-size: rem(25);
+        }
+        p {
+            font-family: $font__text--light;
+            font-size: rem(18);
+        }
+        .buttonStyle {
+            font-size: rem(18);
+        }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      
+        h3 {
+            font-size: rem(35);
+        }
+        p {
+            font-family: $font__text--light;
+            font-size: rem(22);
+        }
+        
+    }
+
+    @media only screen and (min-width: 735px) {
+      .grid {
+        padding-top: rem(180) !important;
+      }
+    }
+
+    @media only screen and (min-width: 1440px) {
+      .grid {
+        padding-top: rem(205  ) !important;
+      }
+    }
+
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
