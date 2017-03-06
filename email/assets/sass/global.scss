@@ -14,10 +14,9 @@
     @media only screen and (min-width: 768px) {
         padding-top: rem(80);
     }
-     @media only screen and (min-width: 1440px) {
-      @include grid(80%);
-
-     }
+    @media only screen and (min-width: 1440px) {
+        @include grid(80%);
+    }
 }
 
 img {
@@ -27,23 +26,22 @@ img {
 }
 
 .buttonClose {
-  svg {
-    width: rem(25);
-    height: rem(25);
-    fill: $color__white;
-    position: absolute;
-    z-index: 999;
-    top: rem(20);
-    right: rem(30);
-
-     @media only screen and (min-width: 768px) {
-      width: rem(35);
-    height: rem(35);
-      fill: $color__gray--light;
-      top: rem(60);
-      right: rem(30);
-     }
-  }
+    svg {
+        width: rem(25);
+        height: rem(25);
+        fill: $color__white;
+        position: absolute;
+        z-index: 999;
+        top: rem(20);
+        right: rem(30);
+        @media only screen and (min-width: 768px) {
+            width: rem(35);
+            height: rem(35);
+            fill: $color__gray--light;
+            top: rem(60);
+            right: rem(30);
+        }
+    }
 }
 
 header {
@@ -51,7 +49,7 @@ header {
     display: block;
     @media only screen and (min-width: 768px) {
         @include gradiente();
-        height:100vh;
+        height: 100vh;
     }
     & h1 {
         font-family: $font__heading;
@@ -65,21 +63,19 @@ header {
             font-size: rem(35);
         }
         @media only screen and (min-width: 768px) {
-          font-size: rem(70);
+            font-size: rem(70);
             padding: rem(75) rem(0);
             line-height: rem(60);
             display: table-caption;
-
         }
-         @media only screen and (min-width: 1440px) {
-          font-size: rem(100);
-          line-height: rem(90);
-         }
-         @media only screen and (min-width: 2500px) {
-          font-size: rem(150);
-          line-height: rem(120);
-
-         }
+        @media only screen and (min-width: 1440px) {
+            font-size: rem(100);
+            line-height: rem(90);
+        }
+        @media only screen and (min-width: 2500px) {
+            font-size: rem(150);
+            line-height: rem(120);
+        }
     }
 }
 
@@ -92,25 +88,15 @@ header {
     }
     @media only screen and (min-width: 735px) {
         svg {
-            width: rem(60);  
+            width: rem(60);
         }
     }
     @media only screen and (min-width: 1440px) {
-      svg {
+        svg {
             width: rem(100);
             height: rem(100);
-            
         }
-
-        @media only screen and (min-width: 2500px) {
-          svg {
-            width: rem(150);
-            height: rem(150);
-            
-        }
-
-        }
-
+        
     }
 }
 
@@ -138,7 +124,6 @@ section {
         }
     }
     @media only screen and (min-width: 735px) {
-      
         h3 {
             font-size: rem(25);
         }
@@ -150,9 +135,7 @@ section {
             font-size: rem(18);
         }
     }
-
     @media only screen and (min-width: 1440px) {
-      
         h3 {
             font-size: rem(35);
         }
@@ -160,20 +143,25 @@ section {
             font-family: $font__text--light;
             font-size: rem(22);
         }
-        
     }
-
+    @media only screen and (min-width: 2500px) {
+        h3 {
+            font-size: rem(45);
+        }
+        p {
+            font-family: $font__text--light;
+            font-size: rem(32);
+        }
+    }
     @media only screen and (min-width: 735px) {
-      .grid {
-        padding-top: rem(180) !important;
-      }
+        .grid {
+            padding-top: rem(180) !important;
+        }
     }
-
     @media only screen and (min-width: 1440px) {
-      .grid {
-        padding-top: rem(205  ) !important;
-      }
+        .grid {
+            width: 60%;
+            padding-top: rem(205) !important;
+        }
     }
-
-
 }

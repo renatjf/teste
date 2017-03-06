@@ -34,9 +34,9 @@ gulp.task('img', function() {
 
 gulp.task('injectSvg', function() {
 
-  return gulp.src('*.html')
-    .pipe(injectSvg())
-    .pipe(gulp.dest(''));
+    return gulp.src('*.html')
+        .pipe(injectSvg())
+        .pipe(gulp.dest(''));
 
 });
 
