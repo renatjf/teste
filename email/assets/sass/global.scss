@@ -48,7 +48,7 @@ header {
     background: $color__pink;
     display: block;
     @media only screen and (min-width: 768px) {
-        @include gradiente();
+        @include gradienteVertical($color__pink, $color__orange);
         height: 100vh;
     }
     & h1 {
@@ -77,6 +77,66 @@ header {
             line-height: rem(120);
         }
     }
+    &.confirme {
+        @include gradienteHorizontal($color__blue--light, $color__green--light);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        & h1 {
+            display: block;
+        }
+        p {
+            font-family: $font__text--light;
+            color: $color__white;
+            font-size: rem(40);
+
+            @media only screen and (min-width: 320px) {
+                font-size: rem(20);
+            }
+
+            @media only screen and (min-width: 768px) {
+                font-size: rem(30);
+            }
+
+            @media only screen and (min-width: 1440px) {
+                font-size: rem(40);
+            }
+
+            
+
+            
+        }
+    }
+    &.ops {
+        @include gradienteVertical($color__pink, $color__orange);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        & h1 {
+            display: block;
+        }
+        p {
+            font-family: $font__text--light;
+            color: $color__white;
+            font-size: rem(40);
+
+            @media only screen and (min-width: 320px) {
+                font-size: rem(20);
+            }
+            
+            @media only screen and (min-width: 768px) {
+                font-size: rem(30);
+            }
+
+            @media only screen and (min-width: 1440px) {
+                font-size: rem(40);
+            }
+
+            
+
+            
+        }
+    }
 }
 
 .logo {
@@ -96,7 +156,6 @@ header {
             width: rem(100);
             height: rem(100);
         }
-        
     }
 }
 

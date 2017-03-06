@@ -15,12 +15,20 @@ $browser-context: 16;
     width: $wh;
 }
 
-@mixin gradiente() {
-    background: #cb2571;
-    background: -moz-linear-gradient(top, #cb2571 0%, #e94643 100%);
-    background: -webkit-linear-gradient(top, #cb2571 0%, #e94643 100%);
-    background: linear-gradient(to bottom, #cb2571 0%, #e94643 100%);    
+@mixin gradienteVertical($colorLeft, $colorRight) {
+    background: $colorLeft;
+    background: -moz-linear-gradient(-45deg, $colorLeft 0%, $colorRight 100%);
+    background: -webkit-linear-gradient(-45deg, $colorLeft 0%, $colorRight 100%);
+    background: linear-gradient(135deg, $colorLeft 0%, $colorRight 100%);
 }
+
+@mixin gradienteHorizontal($colorLeft, $colorRight) {
+    background: $colorLeft;
+    background: -moz-linear-gradient(-45deg, $colorLeft 0%, $colorRight 100%);
+    background: -webkit-linear-gradient(-45deg, $colorLeft 0%, $colorRight 100%);
+    background: linear-gradient(135deg, $colorLeft 0%, $colorRight 100%);
+}
+
 
 @mixin buttonStyle($radius, $bg, $wh, $hg) {
     border-radius: rem($radius);
@@ -49,8 +57,10 @@ $color__aqua: #00a596;
 $color__magenta: #8c3c8c;
 // New Brand Colors
 $color__blue: #009DF7;
+$color__blue--light: #06a1e0;
 $color__pink: #C72177;
 $color__green: #00d213;
+$color__green--light: #25b672;
 $color__orange: #F8562C;
 $color__yellow: #F0C000;
 $color__alert--red: #ff0000;
