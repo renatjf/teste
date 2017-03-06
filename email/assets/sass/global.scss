@@ -139,6 +139,19 @@ header {
     }
 }
 
+a {
+    text-decoration: none;
+    border-bottom: rem(1) solid $color__white;
+    color: $color__white;
+    padding-bottom: rem(3);
+
+    &:hover {
+        border-bottom: 0;
+    }
+}
+
+
+
 .logo {
     @media only screen and (min-width: 320px) {
         svg {
