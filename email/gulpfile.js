@@ -46,9 +46,9 @@ gulp.task('browser-sync', function() {
     browserSync.init(['./css/**', './**'], {
         server: {
             baseDir: './',
-            // index: './confirmacao.html'
-            // index: './muito-bem.html'
-            index: './ops.html'
+            index: './confirmacao.html'
+        // index: './muito-bem.html'
+        // index: './ops.html'
         }
     });
 });
